@@ -11,28 +11,36 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/addTaskBt"
+            android:id="@+id/addTaskSingleBt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:onClick="addTask"
-            android:text="addTask"
+            android:text="intentService单任务"
             android:textAllCaps="false" />
 
-        <ScrollView
+        <Button
+            android:id="@+id/addTaskMultipleBt"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_below="@id/addTaskBt"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addTaskSingleBt"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="50dp"
+            android:onClick="addTask"
+            android:text="intentService多任务"
+            android:textAllCaps="false" />
 
-            <LinearLayout
-                android:id="@+id/id_ll_taskcontainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+        <Button
+            android:id="@+id/handlerThreadBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addTaskMultipleBt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:onClick="addTask"
+            android:text="HandlerThread任务"
+            android:textAllCaps="false" />
 
     </RelativeLayout>
 
